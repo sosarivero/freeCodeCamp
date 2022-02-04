@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Back Pain Survey Form</title>
+  </head>
+  <body>
+    <div id="main">
+      <figure id="img-div">
+        <img
+          id="image"
+          src="https://www.barbellmedicine.com/wp-content/uploads/2019/02/bbm-11.jpg"
+        />
+        <figcaption id="img-caption">
+          Back Pain is one of the most common human experiences.
+        </figcaption>
+      </figure>
+      <h1 id="title">Survey on Back Pain and Exercise</h1>
+      <p id="description">
+        A short survey to help us better tackle your pain management strategy.
+      </p>
+      <form action="get" id="survey-form">
+        <div class="form-element">
+          <label for="name" id="name-label">Enter your name:</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            required
+            placeholder="Mark Rippetoe"
+          />
+        </div>
+        <div class="form-element">
+          <p>Select your gender:</p>
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">Female</label>
+          <input type="radio" id="other" name="gender" value="other" checked />
+          <label for="other">NB/NA</label>
+        </div>
+        <div class="form-element">
+          <label for="email" id="email-label">Enter your email:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="name@domain.com"
+            required
+          />
+        </div>
+        <div class="form-element">
+          <label for="number" id="number-label"
+            >Rate from 1 to 10 your current back pain:</label
+          >
+          <input
+            type="number"
+            id="number"
+            min="1"
+            max="10"
+            placeholder="1-10"
+          />
+        </div>
+        <div class="form-element">
+          <label for="dropdown" id="dropdown-label"
+            >What exercise caused your back pain?</label
+          >
+          <select name="dropdown" id="dropdown">
+            <option value="">Please choose an exercise.</option>
+            <option value="deadlift">Deadlift</option>
+            <option value="squat">Squat</option>
+            <option value="sitting">Prolonged sitting</option>
+            <option value="daily">Daily task</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <p>How would you like to learn about back pain management?</p>
+        <div class="form-element">
+          <input
+            type="checkbox"
+            id="newsletter"
+            name="newsletter"
+            value="newsletter"
+            checked
+          />
+          <label for="newsletter">Email Newsletter</label>
+          <input type="checkbox" id="books" name="books" value="books" />
+          <label for="books">Book recommendations</label>
+          <input type="checkbox" id="videos" name="videos" value="videos" />
+          <label for="videos">Video content</label>
+        </div>
+        <div class="form-element">
+          <label for="text-area"
+            >Anything else we should know about your back pain?</label
+          >
+          <br />
+          <textarea id="text-area" name="text-area" rows="5" cols="33">
+          </textarea>
+        </div>
+        <input type="submit" id="submit" />
+      </form>
+    </div>
+  </body>
+</html>

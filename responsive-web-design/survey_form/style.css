@@ -1,5 +1,5 @@
 * {
-  text-align: left;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
@@ -7,4 +7,8 @@
 img {
   display: block;
   max-width: 35%;
+}
+
+::placeholder {
+  text-align: left;
 }
