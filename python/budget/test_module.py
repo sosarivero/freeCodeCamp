@@ -4,6 +4,7 @@ from budget import create_spend_chart
 
 
 class UnitTests(unittest.TestCase):
+
     def setUp(self):
         self.food = budget.Category("Food")
         self.entertainment = budget.Category("Entertainment")
@@ -108,6 +109,7 @@ class UnitTests(unittest.TestCase):
                          'Expected different string representation of object.')
 
     def test_create_spend_chart(self):
+        self.maxDiff = None
         self.food.deposit(900, "deposit")
         self.entertainment.deposit(900, "deposit")
         self.business.deposit(900, "deposit")
