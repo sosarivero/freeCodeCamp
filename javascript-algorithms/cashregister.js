@@ -4,11 +4,22 @@ function checkCashRegister(price, cash, cid) {
 
   let result = {};
 
-  return change;
+  if (funds < change) {
+    result.status = 'INSUFFICIENT_FUNDS';
+    result.change = [];
+  } else if (funds === change) {
+    result.status = 'CLOSED';
+    result.change = cashArray(change);
+  } else {
+    result.status = 'OPEN';
+    result.change = cashArray(change);
+  }
+
+  return result;
 }
 
 function cashArray(money) {
-  array = [
+  let array = [
     ['PENNY', 0],
     ['NICKEL', 0],
     ['DIME', 0],
@@ -59,10 +70,12 @@ function cashArray(money) {
     }
   }
 
-  return array;
+  const result = array.filter((item) => item[1] > 0);
+
+  return result;
 }
 
-checkCashRegister(19.5, 20, [
+let hey = checkCashRegister(3.26, 100, [
   ['PENNY', 1.01],
   ['NICKEL', 2.05],
   ['DIME', 3.1],
@@ -74,4 +87,4 @@ checkCashRegister(19.5, 20, [
   ['ONE HUNDRED', 100],
 ]);
 
-console.log(cashArray(20));
+console.log(hey);
