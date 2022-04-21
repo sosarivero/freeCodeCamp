@@ -1,5 +1,6 @@
 'use strict';
 
+// Formats for valid USA telephone numbers:
 // 555-555-5555
 // (555)555-5555
 // (555) 555-5555

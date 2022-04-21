@@ -19,5 +19,3 @@ function rot13(str) {
   });
   return decodified;
 }
-
-console.log(rot13('SERR CVMMN!'));

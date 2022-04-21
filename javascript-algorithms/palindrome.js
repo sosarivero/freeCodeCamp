@@ -8,5 +8,3 @@ function palindrome(str) {
 
   return reversed == modifiedString;
 }
-
-palindrome('_eye');

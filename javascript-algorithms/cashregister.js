@@ -1,3 +1,5 @@
+'use strict';
+
 function checkCashRegister(price, cash, cid) {
   // Use reduce to get the total amount of money in the cash register.
   let funds = cid.reduce((sum, current) => sum + current[1], 0);
