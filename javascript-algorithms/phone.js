@@ -8,9 +8,7 @@
 // 1 555 555 5555
 
 function telephoneCheck(str) {
-  const test1 = /^(1\s?)?(\(\d{3}\)|(\d{3}))\s?-?\d{3}-?\s?\d{4}$/;
+  const usaPhone = /^(1\s?)?(\(\d{3}\)|(\d{3}))\s?-?\d{3}-?\s?\d{4}$/;
 
-  return test1.test(str);
+  return usaPhone.test(str);
 }
-
-console.log(telephoneCheck('1 555 555 5555'));
